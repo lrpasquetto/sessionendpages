@@ -55,20 +55,17 @@ Route::get('sessionPages/{id}/delete', [
 $sessions   = Session::where('parent_id',0)->get();
 
 # view menu
-<ul class="menu nav navbar-nav multi-level" >
-        <li class="active"> <a href="/"> Início </a> </li>
-        <!-- SESSÕES E PAGINAS-->
-        @foreach($sessions as $session)
-            <li @if($session->hasChild() || $session->hasPages()) class="dropdown-submenu" @endif>
-                <a href="#" @if($session->hasChild()) href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" @endif>
-                    {{$session->name}}
-                </a>
-                @if($session->hasChild())
-                    {!! $session->printChildsFront($session->id) !!}
-                @else
-                    {!! $session->printPagesFront($session->id) !!}
-                @endif
-            </li>
-        @endforeach
-        <!-- FIM SESSÕES E PAGINAS-->
-    </ul>
+<!-- SESSÕES E PAGINAS-->
+@foreach($sessions as $session)
+    <li @if($session->hasChild() || $session->hasPages()) class="dropdown-submenu" @endif>
+        <a href="#" @if($session->hasChild()) href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" @endif>
+            {{$session->name}}
+        </a>
+        @if($session->hasChild())
+            {!! $session->printChildsFront($session->id) !!}
+        @else
+            {!! $session->printPagesFront($session->id) !!}
+        @endif
+    </li>
+@endforeach
+
