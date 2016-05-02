@@ -3,6 +3,10 @@
 # composer.json
 composer require lrpasquetto/sessionsandpages
 
+OU
+
+"lrpasquetto/sessionsandpages": "^1.0"
+
 php artisan vendor:publish
 
 # config/app
