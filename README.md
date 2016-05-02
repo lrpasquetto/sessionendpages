@@ -55,7 +55,8 @@ Route::get('sessionPages/{id}/delete', [
 ` $sessions   = Session::where('parent_id',0)->get();`
 
 # view menu
-``` <!-- SESSÕES E PAGINAS-->
+``` 
+<!-- SESSÕES E PAGINAS-->
  @foreach($sessions as $session)
     <li @if($session->hasChild() || $session->hasPages()) class="dropdown-submenu" @endif>
         <a href="#" @if($session->hasChild()) href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" @endif>
