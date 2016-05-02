@@ -52,7 +52,7 @@ Route::get('sessionPages/{id}/delete', [
 ]);
 
 # controller
-`sessions   = Session::where('parent_id',0)->get();`
+` $sessions   = Session::where('parent_id',0)->get();`
 
 # view menu
 ``` <!-- SESSÕES E PAGINAS-->
