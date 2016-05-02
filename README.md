@@ -13,11 +13,11 @@ OU
 php artisan vendor:publish
 
 # config/app
-providers: <br>
+#### providers: ####
 Collective\Html\HtmlServiceProvider::class,<br>
 'lrpasquetto\SessionsAndPages\SessionsAndPagesServiceProvider',
 
-aliases:
+#### aliases ####
 'Form'      => Collective\Html\FormFacade::class,
 'Html'      => Collective\Html\HtmlFacade::class,
 
