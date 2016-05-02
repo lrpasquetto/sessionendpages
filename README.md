@@ -1,5 +1,10 @@
 # Sessions and Pages
 
+# composer.json
+composer require lrpasquetto/sessionsandpages
+
+php artisan vendor:publish
+
 # config/app
 providers: <br>
 Collective\Html\HtmlServiceProvider::class,<br>
