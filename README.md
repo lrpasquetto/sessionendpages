@@ -10,6 +10,7 @@ OU
 
 "lrpasquetto/sessionsandpages": "^1.0"
 
+# publish
 php artisan vendor:publish
 
 # config/app
