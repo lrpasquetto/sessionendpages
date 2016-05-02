@@ -56,19 +56,21 @@ Route::get('sessionPages/{id}/delete', [
 
 # view menu
 ``` 
-<!-- SESSÕES E PAGINAS-->
- @foreach($sessions as $session)
-    <li @if($session->hasChild() || $session->hasPages()) class="dropdown-submenu" @endif>
-        <a href="#" @if($session->hasChild()) href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" @endif>
-            {{$session->name}}
-        </a>
-        @if($session->hasChild())
-            {!! $session->printChildsFront($session->id) !!}
-        @else
-            {!! $session->printPagesFront($session->id) !!}
-        @endif
-    </li>
-@endforeach
+<ul class="menu nav navbar-nav multi-level" >
+    <!-- SESSÕES E PAGINAS-->
+     @foreach($sessions as $session)
+        <li @if($session->hasChild() || $session->hasPages()) class="dropdown-submenu" @endif>
+            <a href="#" @if($session->hasChild()) href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" @endif>
+                {{$session->name}}
+            </a>
+            @if($session->hasChild())
+                {!! $session->printChildsFront($session->id) !!}
+            @else
+                {!! $session->printPagesFront($session->id) !!}
+            @endif
+        </li>
+    @endforeach
+</ul>
 ```
 
 
