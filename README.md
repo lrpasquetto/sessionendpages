@@ -18,6 +18,9 @@ aliases:
 'Form'      => Collective\Html\FormFacade::class,
 'Html'      => Collective\Html\HtmlFacade::class,
 
+# migrate
+php artisan migrate
+
 #Routes
 Route::resource('sessions', 'SessionController');
 Route::get('sessions/{id}/delete', [
