@@ -1,4 +1,7 @@
 # Sessions and Pages
+Gestão de sessões (menu) e páginas. Pode-se adicionar até 2 nivies de sessão (sessao - subsessao) e adicionar "N" páginas dentro de qualquer sessão. Facilita a criação de páginas institucionais em um website
+
+Dica: na view sessionPages > fields.blade.php pode-se implementar um editor ckeditor, assim você tem uma pagina institucional dinamica no site do seu cliente.
 
 # composer.json
 composer require lrpasquetto/sessionsandpages
