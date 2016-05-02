@@ -10,6 +10,10 @@ providers: <br>
 Collective\Html\HtmlServiceProvider::class,<br>
 'lrpasquetto\SessionsAndPages\SessionsAndPagesServiceProvider',
 
+aliases:
+'Form'      => Collective\Html\FormFacade::class,
+'Html'      => Collective\Html\HtmlFacade::class,
+
 #Routes
 Route::resource('sessions', 'SessionController');
 Route::get('sessions/{id}/delete', [
