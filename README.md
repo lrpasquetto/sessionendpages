@@ -10,9 +10,6 @@ OU
 
 "lrpasquetto/sessionsandpages": "^1.0"
 
-# publish
-php artisan vendor:publish
-
 # config/app
 #### providers: ####
 Collective\Html\HtmlServiceProvider::class,<br>
@@ -21,6 +18,9 @@ Collective\Html\HtmlServiceProvider::class,<br>
 #### aliases ####
 'Form'      => Collective\Html\FormFacade::class,
 'Html'      => Collective\Html\HtmlFacade::class,
+
+# publish
+php artisan vendor:publish
 
 # migrate
 php artisan migrate
