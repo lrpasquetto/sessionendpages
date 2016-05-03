@@ -13,7 +13,7 @@ class SessionsAndPagesServiceProvider extends ServiceProvider
         $this->publishes([__DIR__.'/database/migrations/'  => database_path('/migrations')]);
         $this->publishes([__DIR__.'/controllers/'  => app_path('/Http/Controllers')]);
         $this->publishes([__DIR__.'/models/'  => app_path('/')]);
-        $this->publishes([__DIR__.'/resources/views/'  => resource_path('/views')]);
+        $this->publishes([__DIR__.'/resources/views/'  => base_path('/resources/views')]);
         $this->publishes([__DIR__.'/requests/'  => app_path('/Http/Requests')]);
         $this->publishes([__DIR__.'/repositories/'  => app_path('/Libraries/Repositories')]);
         $this->loadViewsFrom(__DIR__.'/resources/views','sessionsAndPages');
